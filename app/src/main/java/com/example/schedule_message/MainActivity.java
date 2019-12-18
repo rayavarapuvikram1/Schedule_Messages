@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
                 if (!phone.getText().toString().isEmpty() && !message.getText().toString().isEmpty())
                 {
                     editor.putString("phone", "+91" + phone.getText().toString());
-                    String main_mes = message.getText().toString() + "_SM";
+                    String main_mes = message.getText().toString() + getApplicationContext().getString(R.string.whatsapp_suffix);
                     editor.putString("message", main_mes);
                     editor.apply();
 
